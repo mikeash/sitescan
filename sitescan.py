@@ -50,6 +50,7 @@ def Scan(baseurl):
 
 if len(sys.argv) != 2:
     print >> sys.stderr, 'usage: %s <url>' % sys.argv[0]
+    sys.exit(1)
 
 url = sys.argv[1]
 if not url.startswith('http://') and not url.startswith('https://'):
