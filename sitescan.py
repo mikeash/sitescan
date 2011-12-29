@@ -43,9 +43,12 @@ def Scan(baseurl):
                 seen.add(link)
                 toScan.append((url, link))
     
-    for url in errors.keys():
-        code, fromURL = errors[url]
-        print url, code, 'linked from', fromURL
+    if errors:
+        for url in errors.keys():
+            code, fromURL = errors[url]
+            print url, code, 'linked from', fromURL
+    else:
+        print 'no errors found, done'
 
 
 if len(sys.argv) != 2:
