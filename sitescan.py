@@ -29,7 +29,7 @@ def GetLinksWithPrefix(prefix, url, data):
 
 def Scan(baseurl):
     toScan = [('', baseurl)]
-    seen = set()
+    seen = set(baseurl)
     errors = {}
     
     while toScan:
